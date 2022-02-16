@@ -56,18 +56,10 @@ function factorial (num ){
 
 // crie a função fibonacci
 
-/*function fibonacci (num ){
-  let result = 1;
-  
-   for( let i = 1; i <= num; i++){
-     result = result + i;
-    
-     
-     
-  }
- console.log(result)
-  return result ;
-}*/
+function fibonacci (num){
+  let soma = add((num -1), (num -2));
+  return soma
+ }
 // descomente a linha seguinte para testar sua função
 // console.assert(fibonacci(8) === 13, 'A função fibonacci não está funcionando como esperado');
 
