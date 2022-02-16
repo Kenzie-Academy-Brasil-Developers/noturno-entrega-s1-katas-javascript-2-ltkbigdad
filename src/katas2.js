@@ -11,10 +11,10 @@ function add (num1, num2){
 
 // comece a criar a sua função multiply na linha abaixo
 
-function multiply (soma, num2){
+function multiply (num1, num2){
     let produto = 0;
-    for (let i = 0; i < soma; i++){
-      produto += num2;
+    for (let i = 0; i < num1; i++){
+      produto = add(produto, num2);
     }
     return produto;
   }
@@ -23,10 +23,10 @@ function multiply (soma, num2){
 
 
 // comece a criar a sua função power na linha abaixo
-function power (soma, produto){
-    let result = soma;
-    for (let i = 1; i < produto; i++){
-      result += result;
+function power (num1, num2){
+    let result = 1;
+    for (let i = 1; i < num2; i++){
+      result = multiply(result, num1);
     }
     return result;
   }
@@ -36,8 +36,14 @@ function power (soma, produto){
 
 
 // comece a criar a sua função factorial na linha abaixo
-function factorial ( ){
-    
+function factorial (num ){
+  let result = 1;
+  if (num > 1){
+   for( let i = num; i >= 1; i--){
+     result = multiply(result, i);
+   }
+  } 
+  return result;
 }
 
 // descomente a linha seguinte para testar sua função
@@ -50,7 +56,18 @@ function factorial ( ){
 
 // crie a função fibonacci
 
-
+/*function fibonacci (num ){
+  let result = 1;
+  
+   for( let i = 1; i <= num; i++){
+     result = result + i;
+    
+     
+     
+  }
+ console.log(result)
+  return result ;
+}*/
 // descomente a linha seguinte para testar sua função
 // console.assert(fibonacci(8) === 13, 'A função fibonacci não está funcionando como esperado');
 
